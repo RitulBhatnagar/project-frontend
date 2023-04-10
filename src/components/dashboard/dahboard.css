@@ -1,0 +1,71 @@
+.main{
+  flex: 5;
+  height: 100%;
+}
+.heading-container{
+  margin-top: 20px;
+  margin-left: 30px;
+  text-align: left;
+  font-family: "Lato";
+}
+.heading-container h1{
+  font-size: 28px;
+
+  font-weight: bold;
+}
+.heading-container p{
+  font-size: 14px;
+}
+.chart-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
+
+}
+.chart-container img{
+  width: 500px;
+  height: 335px;
+}
+.table-container{
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: inherit;
+}
+table {
+  text-align: left;
+}
+
+
+
+th,
+td {
+  border-bottom: 0.5px groove #333333;
+  border-radius:1px;
+  text-align: left;
+  padding: 12px;
+  font-size: 12px;
+  font-family: "Lato";
+}
+
+th {
+  background-color: #224B54;
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  background-color: #D4D4D4;
+  font-weight:700;
+}
+.download-btn{
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.download-btn img{
+  margin-left: 5px;
+}

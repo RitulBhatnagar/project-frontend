@@ -1,0 +1,33 @@
+table{
+  width: 100%;
+}
+.edit-delete{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.del-btn,
+.edit-btn{
+  font-weight: 700;
+}
+.edit-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 15px;
+}
+
+.edit-btn img{
+  margin-right: 5px;
+}
+.del-btn img{
+  margin-right: 5px;
+
+}
+.del-btn{
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+
+}
