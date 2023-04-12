@@ -1,15 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-*{
+body{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-body {
-  margin: 0;
-  line-height: normal;
-}
+
 :root {
   /* fonts */
   --font-lato: Lato;
@@ -44,3 +40,57 @@ body {
   --br-51xl: 70px;
   --br-xs: 12px;
 }
+.body-container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.main{
+  flex: 5;
+  height: 100%;
+}
+.operation{
+  position: relative;
+width: 100vw;
+height: 100vh;
+align-items: center;
+   font-size: var(--font-size-lg);
+   color: var(--color-darkslategray-200);
+   font-family: var(--font-montserrat);
+   background-image: url("./assets/image 3.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   overflow: hidden;
+ }
+ .mirror{
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 500px;
+  }
+ .child4,
+ .child3{
+   position: absolute;
+   top: 14px;
+   left: 10px;
+   border-radius: var(--br-xs);
+   background-color: var(--color-gray-300);
+   width: 420px;
+   height: 530px;
+ }
+ .child4{
+   top: 0;
+   left: 17px;
+   width: 420px;
+   height: 560px;
+ }
+ .company_logo{
+   position: fixed;
+   top: 0;
+   left: 0;
+   margin-top: 16px;
+   margin-left: 10px;
+  }

@@ -48,9 +48,9 @@ const FrameComponent = () => {
    return errors;
   }
   return (
-  <div className="container">
-    <img className="bg-img" alt = ""  src = {image}/>
-    <div className="parent">
+  <div className="operation">    
+
+    <div className="mirror">
           <div className="child3" />
           <div className="child4" />
         </div>

@@ -24,14 +24,11 @@ flex: 3;
 display: flex;
 align-items: center;
 color: white;
-justify-content: space-between;
+justify-content: space-evenly;
+gap: 2px;
 }
-.profile-menu{
-  width: 40%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  cursor: pointer;
+.bell-container{
+  margin-left: 20px;
 }
 .bellicon{
   width: 20px;

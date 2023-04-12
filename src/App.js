@@ -8,14 +8,23 @@ import Dashboard from './pages/Dashboard/Dashboard'
 import Header from './components/header/Header'
 import Sidebar from './components/sidebar/Sidebar'
 import Entity from './pages/entity/Entity'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Client from './pages/client/Client'
+import Engage from './pages/engage/Engage'
+import UserId from './pages/UserId/UserId'
+import Data from './pages/data/Data'
 const App = () => {
   return (
     <div>
       <BrowserRouter>
+      <ToastContainer
+      position='bottom-center'
+      />
       <Routes>
         <Route path = "/" element = {<Homepage/>}/>
-        <Route path = "/signIn" element = {<SignIn/>}/>
-        <Route path = "/forgotPassword" element = {<ForgotPassword/>}/>
+         <Route path = "/signIn" element = {<SignIn/>}/>
+        <Route path = "/forgotPassword" element = {<ForgotPassword/>}/> 
         <Route path = "/link" element = {<LinkPage/>}/>
         <Route path = "/dashboard" element = {
     
@@ -23,6 +32,11 @@ const App = () => {
         }
         />
         <Route path = "/entity" element = {<Entity/>}/>
+        <Route path = "/client" element = {<Client/>}/>
+        <Route path = "/engage" element = {<Engage/>}/>
+        <Route path = "/userid" element = {<UserId/>}/>
+        <Route path = "/data" element = {<Data/>}/>
+
       </Routes>
       </BrowserRouter>
     </div>

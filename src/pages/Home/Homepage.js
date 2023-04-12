@@ -1,46 +1,46 @@
-import "./home.css";
+import "./home2.css";
 import image from "../../assets/image 3.jpg"
 import ellipse from "../../assets/Ellipse 1.png"
-import logo from "../../assets/Group.png"
+import logoHome from "../../assets/logoHome.png"
 import {Link} from "react-router-dom"
+import homeImg from "../../assets/homeImg.png"
 const Home = () => {
   return (
-    <div className="image-3-frame">
-      <img className="image-3-icon5" alt="" src = {image} />
-      <button className="group-button">
-        <button className="rectangle-button" />
-        <div className="register-for-60">Register for 60 Day Trial</div>
-      </button>
-      <button className="rectangle-parent14">
-        <button className="group-child40" />
-        <button className="know-more" >
-          Know More
+    <div className="operation">
+      {/* <img className="bg-img" alt="" src = {image} /> */}
+    <div className="top-bar">
+      <img src = {logoHome} alt = ""/>
+      <div className="btn-container">
+        <button className="gradient">
+          Register For 60 days
         </button>
-      </button>
-      <Link to = "/signIn">
-      <button className="rectangle-parent15">
-        <button className="group-child41"  />
-        <div className="sign-in6">
-          
+        <Link to = "/signIn">
+        <button className="signIn">
           Sign In
-          </div>
-      </button>
-      </Link>
-
-      <div className="audit-automation-for">
-        Audit Automation for Professional Service Organizations
+        </button>
+        </Link>
       </div>
-      <div className="effectively-manage-your">
-        Effectively manage your Data and Audit with best-in-class analytics and
-        visualizations
+     
+    </div>
+    <div className="banner">
+        <div className="banner-heading">
+          <h1>
+          Audit Automation for Professional Service Organisations
+          </h1>
+          <p>
+          Effectively manage your Data and Audit with best-in-class analytics and visualizations
+          </p>
+          <button className="gradient">
+            Know More
+          </button>
+        </div>
+        <div className = "banner-img">
+          <img src = {homeImg} alt = ""/>
+        </div>
       </div>
-      <div className="the-most-advanced-container">
-        <span>{`The most advanced `}</span>
-        <span className="analytics-driven">analytics-driven</span>
-        <span> Audit Software</span>
+      <div className="last-heading">
+        <p>The most advanced <span className="yellowClass"> analytics-driven </span>Audit Software</p>
       </div>
-      <img className="frame-child23" alt="" src= {ellipse} />
-      <img className="group-icon2" alt="" src = {logo} />
     </div>
   );
 };

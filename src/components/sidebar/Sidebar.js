@@ -8,7 +8,9 @@ import usericon from "../../assets/usericon.png"
 import fileicon from "../../assets/fileicon.png"
 import "./sidebar.css"
 import {Link} from "react-router-dom"
+import {useState} from  "react"
 const Sidebar = () => {
+  const[isOpen, setIsOpen] = useState(false);
   return (
   <div className="sidebar">
     <div className="sidebar-content">
@@ -24,23 +26,31 @@ const Sidebar = () => {
         <h3>Entity Master</h3>
       </div>
       </Link>
+      <Link to = "/client">
       <div className="sidebar-item">
       <img src = {clienticon} alt = "" />
         <h3>client Master</h3>
       </div>
+      </Link>
+      <Link to = "/engage">
       <div className="sidebar-item">
       <img src = {engageicon} alt = "" />
        <h3> Engagement Master</h3>
       </div>
+      </Link>
+      <Link to = "/userid">
       <div className="sidebar-item">
       <img src = {usericon} alt = "" />
        <h3> User ID Master</h3>
       </div>
+      </Link>
+      <Link to = "/data">
       <div className="sidebar-item"
       >
         <img src = {fileicon} alt = "" />
         <h3>Data Upload & Analysis</h3>
       </div>
+      </Link>
     </div>
   </div>
   )
