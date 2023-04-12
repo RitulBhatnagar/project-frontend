@@ -6,18 +6,18 @@ import EntityComp from '../../components/entity/EntityComp'
 import { getAllEntity, reset } from '../../redux/entity/entitySlice'
 import {useDispatch, useSelector}from "react-redux"
 const Entity = () => {
-  const dispatch = useDispatch();
-  const{entities, isLoading, isError, message, isSuccess} = useSelector((state) => state.entity);
-  useEffect(() => {
-    if (isError) {
-      console.log(message);
-    }
-    dispatch(getAllEntity());
-    return () => {
-      dispatch(reset())
-    }
-  }, [isError, message, dispatch]);
-  console.log(entities);
+  // const dispatch = useDispatch();
+  // const{entities, isLoading, isError, message, isSuccess} = useSelector((state) => state.entity);
+  // useEffect(() => {
+  //   if (isError) {
+  //     console.log(message);
+  //   }
+  //   dispatch(getAllEntity());
+  //   return () => {
+  //     dispatch(reset())
+  //   }
+  // }, [isError, message, dispatch]);
+  // console.log(entities);
   return (
     <>
     <Header/>
