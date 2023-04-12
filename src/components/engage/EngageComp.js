@@ -133,6 +133,86 @@ const EngageComp = () => {
 
           </tr>
     
+          <tr>
+
+<td >Microsoft</td>
+<td>E1001</td>
+<td>Engagement 03</td>
+<td className = "edit-delete">
+   <div >
+   <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+    <img   src = {editicon} alt = ""/>  
+    Edit
+  </button>
+   </div>
+  <button className = "del-btn" >
+    <img src = {delicon} alt = ""/>
+   Delete
+  </button>
+</td>
+
+</tr>
+
+<tr>
+
+<td >Microsoft</td>
+<td>E1001</td>
+<td>Engagement 03</td>
+<td className = "edit-delete">
+   <div >
+   <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+    <img   src = {editicon} alt = ""/>  
+    Edit
+  </button>
+   </div>
+  <button className = "del-btn" >
+    <img src = {delicon} alt = ""/>
+   Delete
+  </button>
+</td>
+
+</tr>
+
+<tr>
+
+<td >Microsoft</td>
+<td>E1001</td>
+<td>Engagement 03</td>
+<td className = "edit-delete">
+   <div >
+   <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+    <img   src = {editicon} alt = ""/>  
+    Edit
+  </button>
+   </div>
+  <button className = "del-btn" >
+    <img src = {delicon} alt = ""/>
+   Delete
+  </button>
+</td>
+
+</tr>
+
+<tr>
+
+<td >Microsoft</td>
+<td>E1001</td>
+<td>Engagement 03</td>
+<td className = "edit-delete">
+   <div >
+   <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+    <img   src = {editicon} alt = ""/>  
+    Edit
+  </button>
+   </div>
+  <button className = "del-btn" >
+    <img src = {delicon} alt = ""/>
+   Delete
+  </button>
+</td>
+
+</tr>
+
         </tbody>
            </tabel>
       </div>

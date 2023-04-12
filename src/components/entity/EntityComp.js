@@ -161,7 +161,75 @@ const EntityComp = ({entities}) => {
 
             </thead>
             <tbody>
-          {
+            <tr>
+          <td>u1</td>
+            <td>Engagement Master</td>
+            <td className = "edit-delete">
+               <div >
+               <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+                <img   src = {editicon} alt = ""/>  
+                Edit
+              </button>
+               </div>
+              <button className = "del-btn">
+                <img src = {delicon} alt = ""/>
+               Delete
+              </button>
+            </td>
+
+          </tr>
+          <tr>
+          <td>u1</td>
+            <td>Engagement Master</td>
+            <td className = "edit-delete">
+               <div >
+               <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+                <img   src = {editicon} alt = ""/>  
+                Edit
+              </button>
+               </div>
+              <button className = "del-btn">
+                <img src = {delicon} alt = ""/>
+               Delete
+              </button>
+            </td>
+
+          </tr>
+          <tr>
+           <td>u1</td>
+            <td>Engagement Master</td>
+            <td className = "edit-delete">
+               <div >
+               <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+                <img   src = {editicon} alt = ""/>  
+                Edit
+              </button>
+               </div>
+              <button className = "del-btn">
+                <img src = {delicon} alt = ""/>
+               Delete
+              </button>
+            </td>
+
+          </tr>
+          <tr>
+          <td>u1</td>
+            <td>Engagement Master</td>
+            <td className = "edit-delete">
+               <div >
+               <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+                <img   src = {editicon} alt = ""/>  
+                Edit
+              </button>
+               </div>
+              <button className = "del-btn">
+                <img src = {delicon} alt = ""/>
+               Delete
+              </button>
+            </td>
+
+          </tr>
+          {/* {
             entities.map((data, index) => {
               const {id, entity_name, entity_code} = data;
                return ( 
@@ -184,7 +252,7 @@ const EntityComp = ({entities}) => {
           </tr>)
               
       } )
-          }
+          } */}
         </tbody>
            </tabel>
       </div>

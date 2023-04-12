@@ -234,6 +234,98 @@ const UserComp = () => {
                </td>
    
              </tr>
+             <tr>
+   
+   <td >Sonali2013</td>
+   <td>Sonali</td>
+   <td>Chopra</td>
+   <td>sonali20@gmail.com</td>
+   <td>+91 9990082132</td>
+   <td>India</td>
+   <td>Finance Officer</td>
+   <td className = "edit-delete">
+      <div >
+      <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+       <img   src = {editicon} alt = ""/>  
+       Edit
+     </button>
+      </div>
+     <button className = "del-btn" >
+       <img src = {delicon} alt = ""/>
+      Delete
+     </button>
+   </td>
+
+ </tr>
+ <tr>
+   
+   <td >Sonali2013</td>
+   <td>Sonali</td>
+   <td>Chopra</td>
+   <td>sonali20@gmail.com</td>
+   <td>+91 9990082132</td>
+   <td>India</td>
+   <td>Finance Officer</td>
+   <td className = "edit-delete">
+      <div >
+      <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+       <img   src = {editicon} alt = ""/>  
+       Edit
+     </button>
+      </div>
+     <button className = "del-btn" >
+       <img src = {delicon} alt = ""/>
+      Delete
+     </button>
+   </td>
+
+ </tr>
+ <tr>
+   
+   <td >Sonali2013</td>
+   <td>Sonali</td>
+   <td>Chopra</td>
+   <td>sonali20@gmail.com</td>
+   <td>+91 9990082132</td>
+   <td>India</td>
+   <td>Finance Officer</td>
+   <td className = "edit-delete">
+      <div >
+      <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+       <img   src = {editicon} alt = ""/>  
+       Edit
+     </button>
+      </div>
+     <button className = "del-btn" >
+       <img src = {delicon} alt = ""/>
+      Delete
+     </button>
+   </td>
+
+ </tr>
+ <tr>
+   
+   <td >Sonali2013</td>
+   <td>Sonali</td>
+   <td>Chopra</td>
+   <td>sonali20@gmail.com</td>
+   <td>+91 9990082132</td>
+   <td>India</td>
+   <td>Finance Officer</td>
+   <td className = "edit-delete">
+      <div >
+      <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+       <img   src = {editicon} alt = ""/>  
+       Edit
+     </button>
+      </div>
+     <button className = "del-btn" >
+       <img src = {delicon} alt = ""/>
+      Delete
+     </button>
+   </td>
+
+ </tr>
        
            </tbody>
               </tabel>

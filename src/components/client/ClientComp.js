@@ -64,7 +64,6 @@ const ClientComp = ({entityName, clients}) => {
         },
         {
           label: "Cancel",
-          // onClick: () => alert('Click No')
         },
       ],
     });
@@ -288,8 +287,123 @@ const ClientComp = ({entityName, clients}) => {
 
             </thead>
             <tbody>
+            <tr>
+                  <td>u10</td>
+                    <td>Microsoft</td>
+                    <td>Software</td>
+                    <td>100000</td>
+                    <td>50%</td>
+                    <td>lorem ipsum</td>
+                    <td>lorem ipsum</td>
+                    <td>lorem ipsum</td>
+                    <td className = "edit-delete">
+                       <div >
+                       <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+                        <img   src = {editicon} alt = ""/>  
+                        Edit
+                      </button>
+                       </div>
+                      <button  className = "del-btn" >
+                        <img src = {delicon} alt = ""/>
+                       Delete
+                      </button>
+                    </td>
         
-            {
+                  </tr>
+                  <tr>
+                  <td>u10</td>
+                    <td>Microsoft</td>
+                    <td>Software</td>
+                    <td>100000</td>
+                    <td>50%</td>
+                    <td>lorem ipsum</td>
+                    <td>lorem ipsum</td>
+                    <td>lorem ipsum</td>
+                    <td className = "edit-delete">
+                       <div >
+                       <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+                        <img   src = {editicon} alt = ""/>  
+                        Edit
+                      </button>
+                       </div>
+                      <button  className = "del-btn" >
+                        <img src = {delicon} alt = ""/>
+                       Delete
+                      </button>
+                    </td>
+        
+                  </tr>
+                  <tr>
+                  <td>u10</td>
+                    <td>Microsoft</td>
+                    <td>Software</td>
+                    <td>100000</td>
+                    <td>50%</td>
+                    <td>lorem ipsum</td>
+                    <td>lorem ipsum</td>
+                    <td>lorem ipsum</td>
+                    <td className = "edit-delete">
+                       <div >
+                       <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+                        <img   src = {editicon} alt = ""/>  
+                        Edit
+                      </button>
+                       </div>
+                      <button  className = "del-btn" >
+                        <img src = {delicon} alt = ""/>
+                       Delete
+                      </button>
+                    </td>
+        
+                  </tr>
+                  <tr>
+                  <td>u10</td>
+                    <td>Microsoft</td>
+                    <td>Software</td>
+                    <td>100000</td>
+                    <td>50%</td>
+                    <td>lorem ipsum</td>
+                    <td>lorem ipsum</td>
+                    <td>lorem ipsum</td>
+                    <td className = "edit-delete">
+                       <div >
+                       <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+                        <img   src = {editicon} alt = ""/>  
+                        Edit
+                      </button>
+                       </div>
+                      <button  className = "del-btn" >
+                        <img src = {delicon} alt = ""/>
+                       Delete
+                      </button>
+                    </td>
+        
+                  </tr>
+                  <tr>
+                  <td>u10</td>
+                    <td>Microsoft</td>
+                    <td>Software</td>
+                    <td>100000</td>
+                    <td>50%</td>
+                    <td>lorem ipsum</td>
+                    <td>lorem ipsum</td>
+                    <td>lorem ipsum</td>
+                    <td className = "edit-delete">
+                       <div >
+                       <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
+                        <img   src = {editicon} alt = ""/>  
+                        Edit
+                      </button>
+                       </div>
+                      <button  className = "del-btn" >
+                        <img src = {delicon} alt = ""/>
+                       Delete
+                      </button>
+                    </td>
+        
+                  </tr>
+        
+            {/* {
               clients.map((data) => {
                 const{id, client_code, client_name, name_of_industry, size, growth_cagr, genral_overview,competetors, latest_news_snippets} = data;
                 return(
@@ -319,7 +433,7 @@ const ClientComp = ({entityName, clients}) => {
                 )
               })
             }
-    
+     */}
         </tbody>
            </tabel>
       </div>
