@@ -23,7 +23,7 @@ const Entity = () => {
     <Header/>
     <div className="body-container">
       <Sidebar/>
-      <EntityComp isLoading = {isLoading} entities = {entities}/>
+      <EntityComp />
     </div>
     </>
   )

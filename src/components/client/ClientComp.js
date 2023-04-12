@@ -36,7 +36,7 @@ const initialState = {
 }
 
 
-const ClientComp = ({entityName, clients}) => {
+const ClientComp = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   // const[client, setClient] = useState(initialState);
@@ -118,11 +118,11 @@ const ClientComp = ({entityName, clients}) => {
          marginTop="5px"
          name = "entity_name"
         >
-          {
+          {/* {
             entityName.map((data, i) => (
               <option>{data}</option>
             ))
-          }
+          } */}
           </Select>
 
            </div>

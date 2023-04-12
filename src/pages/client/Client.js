@@ -38,7 +38,7 @@ const Client = () => {
     <Header/>
     <div className="body-container">
       <Sidebar/>
-      <ClientComp entityName = {entityName} clients = {clients}/>
+      <ClientComp/>
     </div>
     </>
   )

@@ -26,7 +26,7 @@ const initialState = {
   entity_code : "",
   entity_name : "",
 }
-const EntityComp = ({entities}) => {
+const EntityComp = () => {
   // const dispatch = useDispatch();
   // const entityEdit = useSelector(selectEntity);
   const { isOpen, onOpen, onClose } = useDisclosure();
