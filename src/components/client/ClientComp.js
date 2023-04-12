@@ -39,52 +39,52 @@ const initialState = {
 const ClientComp = ({entityName, clients}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  const[client, setClient] = useState(initialState);
-  const dispatch = useDispatch();
-  console.log(entityName);
-  const handleChange = (e) => {
-    e.preventDefault();
-    const{name, value} = e.target;
-    setClient({...client, [name]  :value});
-    console.log(client);
-  }
-  const delClient = async(id) => {
-   console.log(id);
-   await dispatch(deleteclient(id));
-   await dispatch(getAllclient());
-  }
-  const confirmDelete = (id) => {
-    confirmAlert({
-      title: "Delete Client",
-      message: "Are you sure you want to delete this Client.",
-      buttons: [
-        {
-          label: "Delete",
-          onClick: () => delClient(id),
-        },
-        {
-          label: "Cancel",
-        },
-      ],
-    });
-  }
-  const handleSubmit = async(e)=>{
-    e.preventDefault();
-    const formData = {
-     "client_code" : client.client_code,
-     "client_name" : client.client_name,
-     "name_of_industry" : client.name_of_industry,
-     "size" : client.size,
-      "growth_cagr" : client.growth_cagr,
-      "genral_overview" : client.genral_overview,
-      "competetors" : client.competetors,
-      "latest_news_snippets" : client.latest_news_snippets,
-      "entity_name" : client.entity_name 
-    }
-    await dispatch(createclient(formData));
-    await dispatch(getAllclient());
-    setClient(initialState)
-  }
+  // const[client, setClient] = useState(initialState);
+  // const dispatch = useDispatch();
+  // console.log(entityName);
+  // const handleChange = (e) => {
+  //   e.preventDefault();
+  //   const{name, value} = e.target;
+  //   setClient({...client, [name]  :value});
+  //   console.log(client);
+  // }
+  // const delClient = async(id) => {
+  //  console.log(id);
+  //  await dispatch(deleteclient(id));
+  //  await dispatch(getAllclient());
+  // }
+  // const confirmDelete = (id) => {
+  //   confirmAlert({
+  //     title: "Delete Client",
+  //     message: "Are you sure you want to delete this Client.",
+  //     buttons: [
+  //       {
+  //         label: "Delete",
+  //         onClick: () => delClient(id),
+  //       },
+  //       {
+  //         label: "Cancel",
+  //       },
+  //     ],
+  //   });
+  // }
+  // const handleSubmit = async(e)=>{
+  //   e.preventDefault();
+  //   const formData = {
+  //    "client_code" : client.client_code,
+  //    "client_name" : client.client_name,
+  //    "name_of_industry" : client.name_of_industry,
+  //    "size" : client.size,
+  //     "growth_cagr" : client.growth_cagr,
+  //     "genral_overview" : client.genral_overview,
+  //     "competetors" : client.competetors,
+  //     "latest_news_snippets" : client.latest_news_snippets,
+  //     "entity_name" : client.entity_name 
+  //   }
+  //   await dispatch(createclient(formData));
+  //   await dispatch(getAllclient());
+  //   setClient(initialState)
+  // }
   return (
        <div className="main">
  <div className="top-container">
@@ -117,8 +117,6 @@ const ClientComp = ({entityName, clients}) => {
          color  = "#999999"
          marginTop="5px"
          name = "entity_name"
-         value = {client.entity_name}
-         onChange = {handleChange}
         >
           {
             entityName.map((data, i) => (
@@ -138,8 +136,7 @@ const ClientComp = ({entityName, clients}) => {
          color  = "#999999"
          marginTop="5px"
          name = "client_code"
-         value = {client.client_code}
-         onChange = {handleChange}
+  
       />
       </div>
       <div className="input">
@@ -152,8 +149,7 @@ const ClientComp = ({entityName, clients}) => {
          color  = "#999999"
          marginTop="5px"
         name = "client_name"
-        value = {client.client_name}
-        onChange = {handleChange}
+
       />
       </div>
             </div>
@@ -171,8 +167,7 @@ const ClientComp = ({entityName, clients}) => {
          color  = "#999999"
          marginTop="5px"
          name = "name_of_industry"
-         value = {client.name_of_industry}
-         onChange = {handleChange}
+
         >
         <option>Service</option>
         <option>Marketing</option>
@@ -190,8 +185,7 @@ const ClientComp = ({entityName, clients}) => {
          color  = "#999999"
          marginTop="5px"
         name = "size"
-        value = {client.size}
-        onChange = {handleChange}
+
       />
       </div>
       <div className="input">
@@ -204,8 +198,7 @@ const ClientComp = ({entityName, clients}) => {
          color  = "#999999"
          marginTop="5px"
          name = "growth_cagr"
-         value = {client.growth_cagr}
-         onChange = {handleChange}
+        
       />
       </div>
       <div className="input">
@@ -218,8 +211,7 @@ const ClientComp = ({entityName, clients}) => {
          color  = "#999999"
          marginTop="5px"
          name = "genral_overview"
-         value = {client.genral_overview}
-         onChange = {handleChange}
+       
       />
       </div>
       <div className="input">
@@ -233,8 +225,7 @@ const ClientComp = ({entityName, clients}) => {
          color  = "#999999"
          marginTop="5px"
          name = "latest_news_snippets"
-         value = {client.latest_news_snippets}
-         onChange = {handleChange}
+     
       />
       </div>
 
@@ -251,8 +242,7 @@ const ClientComp = ({entityName, clients}) => {
          color  = "#999999"
          marginTop="5px"
          name = "competetors"
-         value = {client.competetors}
-         onChange = {handleChange}
+    
       />
       </div>
       
@@ -264,7 +254,7 @@ const ClientComp = ({entityName, clients}) => {
             <Button variant='outline' size = "lg" backgroundColor =  "#ffff" borderRadius = "80px"color = "#333333" width = "200px" border = " 1px solid #999999"marginRight="20px" height = "38px" >
               Reset
             </Button>
-            <Button colorScheme='blue' size = "lg" backgroundColor =  "#274C86" borderRadius = "80px"color = "white" width = "200px" height = "38px" onClick={handleSubmit}>+Add</Button>
+            <Button colorScheme='blue' size = "lg" backgroundColor =  "#274C86" borderRadius = "80px"color = "white" width = "200px" height = "38px" >+Add</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

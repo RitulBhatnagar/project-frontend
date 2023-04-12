@@ -27,57 +27,57 @@ const initialState = {
   entity_name : "",
 }
 const EntityComp = ({entities}) => {
-  const dispatch = useDispatch();
-  const entityEdit = useSelector(selectEntity);
+  // const dispatch = useDispatch();
+  // const entityEdit = useSelector(selectEntity);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef()
-  const[entity, setEntity] = useState(initialState)
-  const delProduct = async (id) => {
-    console.log(id);
-    await dispatch(deleteEntity(id));
-    await dispatch((getAllEntity()));
-  };
-  const confirmDelete = (id) => {
-    confirmAlert({
-      title: "Delete Entity",
-      message: "Are you sure you want to delete this Entity.",
-      buttons: [
-        {
-          label: "Delete",
-          onClick: () => delProduct(id),
-        },
-        {
-          label: "Cancel",
-          // onClick: () => alert('Click No')
-        },
-      ],
-    });
-  }
-  const handleChange = (e) => {
-    e.preventDefault();
-    const {name, value} = e.target;
-    setEntity({...entity, [name] : value});
-    console.log(entity);
-  }
+  // const[entity, setEntity] = useState(initialState)
+  // const delProduct = async (id) => {
+  //   console.log(id);
+  //   await dispatch(deleteEntity(id));
+  //   await dispatch((getAllEntity()));
+  // };
+  // const confirmDelete = (id) => {
+  //   confirmAlert({
+  //     title: "Delete Entity",
+  //     message: "Are you sure you want to delete this Entity.",
+  //     buttons: [
+  //       {
+  //         label: "Delete",
+  //         onClick: () => delProduct(id),
+  //       },
+  //       {
+  //         label: "Cancel",
+  //         // onClick: () => alert('Click No')
+  //       },
+  //     ],
+  //   });
+  // }
+  // const handleChange = (e) => {
+  //   e.preventDefault();
+  //   const {name, value} = e.target;
+  //   setEntity({...entity, [name] : value});
+  //   console.log(entity);
+  // }
 
-  const handleUpdate = (id) => {
-    console.log(id);
-    // const singleEntity = useSelector(getSingleEntity(id));
+  // const handleUpdate = (id) => {
+  //   console.log(id);
+  //   // const singleEntity = useSelector(getSingleEntity(id));
    
   
-  }
-  const saveEntity = async (e) => {
-    e.preventDefault();
+  // }
+  // const saveEntity = async (e) => {
+  //   e.preventDefault();
 
-    const formData = {
-      "entity_code" : entity.entity_code,
-      "entity_name" : entity.entity_name
-    }
-      await dispatch(createEntity(formData));
-      await dispatch(getAllEntity());
-      setEntity(initialState)
+  //   const formData = {
+  //     "entity_code" : entity.entity_code,
+  //     "entity_name" : entity.entity_name
+  //   }
+  //     await dispatch(createEntity(formData));
+  //     await dispatch(getAllEntity());
+  //     setEntity(initialState)
   
-  } 
+  // } 
   return (
     <div className='main'>
       <div className="top-container">
@@ -109,8 +109,7 @@ const EntityComp = ({entities}) => {
          marginTop="5px"
         name = "entity_code"
         type = "text"
-        value  = {entity.entity_code}
-        onChange = {handleChange}
+  
       />
       <Text
       fontFamily =  'Lato'
@@ -134,8 +133,7 @@ const EntityComp = ({entities}) => {
          color  = "#999999"
          marginTop="5px"
         name = "entity_name"
-        value = {entity.entity_name}
-        onChange = {handleChange}
+  
       />
       </div>
             </div>
@@ -145,7 +143,7 @@ const EntityComp = ({entities}) => {
             <Button variant='outline' size = "lg" backgroundColor =  "#ffff" borderRadius = "80px"color = "#333333" width = "200px" border = " 1px solid #999999"marginRight="20px" height = "38px" onClick={onClose}>
               Reset
             </Button>
-            <Button colorScheme='blue' size = "lg" backgroundColor =  "#274C86" borderRadius = "80px"color = "white" width = "200px" height = "38px" onClick={saveEntity}>+Add</Button>
+            <Button colorScheme='blue' size = "lg" backgroundColor =  "#274C86" borderRadius = "80px"color = "white" width = "200px" height = "38px" >+Add</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
