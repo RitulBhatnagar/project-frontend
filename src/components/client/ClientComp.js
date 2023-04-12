@@ -19,9 +19,9 @@ import {
   Select,
   Textarea
 } from '@chakra-ui/react'
-import { useState } from 'react'
-import { confirmAlert } from "react-confirm-alert";
-import { createclient, deleteclient, getAllclient,  }  from "../../redux/client/clientSlice"
+// import { useState } from 'react'
+// import { confirmAlert } from "react-confirm-alert";
+// import { createclient, deleteclient, getAllclient,  }  from "../../redux/client/clientSlice"
 
 const initialState = {
   client_code : "",

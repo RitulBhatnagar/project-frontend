@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import "./entitycomp.css"
 import editicon from "../../assets/editicon.png"
 import delicon from "../../assets/delicon.png"
-import { useDispatch, useSelector } from 'react-redux'
+// import { useDispatch, useSelector } from 'react-redux'
 import {
   Drawer,
   DrawerBody,
@@ -17,11 +17,11 @@ import {
   Divider,
   Text
 } from '@chakra-ui/react'
-import { useState } from 'react'
-import { createEntity } from '../../redux/entity/entitySlice'
-import { confirmAlert } from "react-confirm-alert";
-import "react-confirm-alert/src/react-confirm-alert.css";
-import { deleteEntity, getAllEntity, getSingleEntity, updateEntity, selectEntity } from '../../redux/entity/entitySlice';
+// import { useState } from 'react'
+// import { createEntity } from '../../redux/entity/entitySlice'
+// import { confirmAlert } from "react-confirm-alert";
+// import "react-confirm-alert/src/react-confirm-alert.css";
+// import { deleteEntity, getAllEntity, getSingleEntity, updateEntity, selectEntity } from '../../redux/entity/entitySlice';
 const initialState = {
   entity_code : "",
   entity_name : "",
