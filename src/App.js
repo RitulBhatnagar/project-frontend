@@ -14,6 +14,7 @@ import Client from './pages/client/Client'
 import Engage from './pages/engage/Engage'
 import UserId from './pages/UserId/UserId'
 import Data from './pages/data/Data'
+import Analysis from './pages/analysis/Analysis'
 const App = () => {
   return (
     <div>
@@ -35,7 +36,8 @@ const App = () => {
         <Route path = "/client" element = {<Client/>}/>
         <Route path = "/engage" element = {<Engage/>}/>
         <Route path = "/userid" element = {<UserId/>}/>
-        <Route path = "/data" element = {<Data/>}/>
+        <Route path = "/upload" element = {<Data/>}/>
+        <Route path = "/analysis" element = {<Data/>}/>
 
       </Routes>
       </BrowserRouter>

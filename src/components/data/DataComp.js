@@ -19,14 +19,14 @@ import {
   Select,
    Tabs, TabList, TabPanels, Tab, TabPanel   
 } from '@chakra-ui/react'
-const DataComp = () => {
+const DataComp = ({word}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef()
   return (
     <div className="main">
       <div className="top-container">
         <div className="heading-container">
-          <h1>Data Operations -Upload</h1>
+          <h1>Data Operations - {word}</h1>
           <p>Please add the details of the entity that you are opening today</p>
         </div>
         <div className="button-container">
@@ -44,7 +44,7 @@ const DataComp = () => {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader fontFamily = "Lato" fontWeight = "bold" fontSize = "18px">
-            Data Operations-Upload
+            Data Operations-{word}
           </DrawerHeader>
           <Divider/>
           <DrawerBody>

@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import "./entitycomp.css"
 import editicon from "../../assets/editicon.png"
 import delicon from "../../assets/delicon.png"
 // import { useDispatch, useSelector } from 'react-redux'
+import {OutTable, ExcelRenderer} from "react-excel-renderer"
 import {
   Drawer,
   DrawerBody,
@@ -17,7 +18,8 @@ import {
   Divider,
   Text
 } from '@chakra-ui/react'
-// import { useState } from 'react'
+import { useState } from 'react'
+import * as XLSX from 'xlsx';
 // import { createEntity } from '../../redux/entity/entitySlice'
 // import { confirmAlert } from "react-confirm-alert";
 // import "react-confirm-alert/src/react-confirm-alert.css";
@@ -31,6 +33,8 @@ const EntityComp = () => {
   // const entityEdit = useSelector(selectEntity);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef()
+  const[item, setItem] = useState([]);
+  // const[cols, setCols] = useState([]);
   // const[entity, setEntity] = useState(initialState)
   // const delProduct = async (id) => {
   //   console.log(id);
@@ -78,6 +82,9 @@ const EntityComp = () => {
   //     setEntity(initialState)
   
   // } 
+ 
+  // console.log(header)
+
   return (
     <div className='main'>
       <div className="top-container">
@@ -147,6 +154,7 @@ const EntityComp = () => {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
+      
       </div>
       <div className="table-container">
       <tabel>
@@ -159,9 +167,9 @@ const EntityComp = () => {
 
             </thead>
             <tbody>
-            <tr>
-          <td>u1</td>
-            <td>Engagement Master</td>
+          <tr>
+          <td>E00002</td>
+            <td>SPC Consulting (P) Ltd.</td>
             <td className = "edit-delete">
                <div >
                <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
@@ -177,8 +185,8 @@ const EntityComp = () => {
 
           </tr>
           <tr>
-          <td>u1</td>
-            <td>Engagement Master</td>
+           <td>E00003</td>
+            <td>S.P. Chopra</td>
             <td className = "edit-delete">
                <div >
                <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
@@ -193,40 +201,7 @@ const EntityComp = () => {
             </td>
 
           </tr>
-          <tr>
-           <td>u1</td>
-            <td>Engagement Master</td>
-            <td className = "edit-delete">
-               <div >
-               <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-                <img   src = {editicon} alt = ""/>  
-                Edit
-              </button>
-               </div>
-              <button className = "del-btn">
-                <img src = {delicon} alt = ""/>
-               Delete
-              </button>
-            </td>
-
-          </tr>
-          <tr>
-          <td>u1</td>
-            <td>Engagement Master</td>
-            <td className = "edit-delete">
-               <div >
-               <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-                <img   src = {editicon} alt = ""/>  
-                Edit
-              </button>
-               </div>
-              <button className = "del-btn">
-                <img src = {delicon} alt = ""/>
-               Delete
-              </button>
-            </td>
-
-          </tr>
+          
           {/* {
             entities.map((data, index) => {
               const {id, entity_name, entity_code} = data;
@@ -252,7 +227,7 @@ const EntityComp = () => {
       } )
           } */}
         </tbody>
-           </tabel>
+          </tabel>
       </div>
 
     </div>
