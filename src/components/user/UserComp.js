@@ -20,7 +20,7 @@ import {
 } from '@chakra-ui/react'
 import { useState } from 'react'
 import { confirmAlert } from "react-confirm-alert";
-
+import data from "./user.json"
 const UserComp = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef()
@@ -211,38 +211,19 @@ const UserComp = () => {
                </thead>
                <tbody>
            
-                  <tr>
+               {
+                data.map((item, i) => {
+                  return (
+                    <>
+                       <tr key = {i}>
    
-               <td >Sonali2013</td>
-               <td>Sonali</td>
-               <td>Chopra</td>
-               <td>sonali20@gmail.com</td>
-               <td>+91 9990082132</td>
-               <td>India</td>
-               <td>Finance Officer</td>
-               <td className = "edit-delete">
-                  <div >
-                  <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-                   <img   src = {editicon} alt = ""/>  
-                   Edit
-                 </button>
-                  </div>
-                 <button className = "del-btn" >
-                   <img src = {delicon} alt = ""/>
-                  Delete
-                 </button>
-               </td>
-   
-             </tr>
-             <tr>
-   
-   <td >Sonali2013</td>
-   <td>Sonali</td>
-   <td>Chopra</td>
-   <td>sonali20@gmail.com</td>
-   <td>+91 9990082132</td>
-   <td>India</td>
-   <td>Finance Officer</td>
+   <td >{item.user_id}</td>
+   <td>{item.firstname}</td>
+   <td>{item.lastname}</td>
+   <td>{item.email}</td>
+   <td>+91 {item.mob}</td>
+   <td>{item.country}</td>
+   <td>{item.role}</td>
    <td className = "edit-delete">
       <div >
       <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
@@ -257,75 +238,11 @@ const UserComp = () => {
    </td>
 
  </tr>
- <tr>
-   
-   <td >Sonali2013</td>
-   <td>Sonali</td>
-   <td>Chopra</td>
-   <td>sonali20@gmail.com</td>
-   <td>+91 9990082132</td>
-   <td>India</td>
-   <td>Finance Officer</td>
-   <td className = "edit-delete">
-      <div >
-      <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-       <img   src = {editicon} alt = ""/>  
-       Edit
-     </button>
-      </div>
-     <button className = "del-btn" >
-       <img src = {delicon} alt = ""/>
-      Delete
-     </button>
-   </td>
-
- </tr>
- <tr>
-   
-   <td >Sonali2013</td>
-   <td>Sonali</td>
-   <td>Chopra</td>
-   <td>sonali20@gmail.com</td>
-   <td>+91 9990082132</td>
-   <td>India</td>
-   <td>Finance Officer</td>
-   <td className = "edit-delete">
-      <div >
-      <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-       <img   src = {editicon} alt = ""/>  
-       Edit
-     </button>
-      </div>
-     <button className = "del-btn" >
-       <img src = {delicon} alt = ""/>
-      Delete
-     </button>
-   </td>
-
- </tr>
- <tr>
-   
-   <td >Sonali2013</td>
-   <td>Sonali</td>
-   <td>Chopra</td>
-   <td>sonali20@gmail.com</td>
-   <td>+91 9990082132</td>
-   <td>India</td>
-   <td>Finance Officer</td>
-   <td className = "edit-delete">
-      <div >
-      <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-       <img   src = {editicon} alt = ""/>  
-       Edit
-     </button>
-      </div>
-     <button className = "del-btn" >
-       <img src = {delicon} alt = ""/>
-      Delete
-     </button>
-   </td>
-
- </tr>
+                    </>
+                  )
+                })
+               }
+         
        
            </tbody>
               </tabel>

@@ -20,6 +20,7 @@ import {
 } from '@chakra-ui/react'
 import { useState } from 'react'
 import { confirmAlert } from "react-confirm-alert";
+import data from "./engage.json"
 const EngageComp = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef()
@@ -113,11 +114,15 @@ const EngageComp = () => {
             </thead>
             <tbody>
         
-               <tr>
+               {
+                data.map((item, i) => {
+                  return (
+                    <>
+                    <tr key = {i}>
 
-            <td >Microsoft</td>
-            <td>E1001</td>
-            <td>Engagement 03</td>
+            <td >{item.client_name}</td>
+            <td>{item.code}</td>
+            <td>{item.engagement}</td>
             <td className = "edit-delete">
                <div >
                <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
@@ -132,86 +137,12 @@ const EngageComp = () => {
             </td>
 
           </tr>
+                    </>
+                  )
+                })
+               }
     
-          <tr>
-
-<td >Microsoft</td>
-<td>E1001</td>
-<td>Engagement 03</td>
-<td className = "edit-delete">
-   <div >
-   <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-    <img   src = {editicon} alt = ""/>  
-    Edit
-  </button>
-   </div>
-  <button className = "del-btn" >
-    <img src = {delicon} alt = ""/>
-   Delete
-  </button>
-</td>
-
-</tr>
-
-<tr>
-
-<td >Microsoft</td>
-<td>E1001</td>
-<td>Engagement 03</td>
-<td className = "edit-delete">
-   <div >
-   <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-    <img   src = {editicon} alt = ""/>  
-    Edit
-  </button>
-   </div>
-  <button className = "del-btn" >
-    <img src = {delicon} alt = ""/>
-   Delete
-  </button>
-</td>
-
-</tr>
-
-<tr>
-
-<td >Microsoft</td>
-<td>E1001</td>
-<td>Engagement 03</td>
-<td className = "edit-delete">
-   <div >
-   <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-    <img   src = {editicon} alt = ""/>  
-    Edit
-  </button>
-   </div>
-  <button className = "del-btn" >
-    <img src = {delicon} alt = ""/>
-   Delete
-  </button>
-</td>
-
-</tr>
-
-<tr>
-
-<td >Microsoft</td>
-<td>E1001</td>
-<td>Engagement 03</td>
-<td className = "edit-delete">
-   <div >
-   <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-    <img   src = {editicon} alt = ""/>  
-    Edit
-  </button>
-   </div>
-  <button className = "del-btn" >
-    <img src = {delicon} alt = ""/>
-   Delete
-  </button>
-</td>
-
-</tr>
+       
 
         </tbody>
            </tabel>

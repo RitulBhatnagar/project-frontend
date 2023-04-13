@@ -2,8 +2,8 @@ import React from 'react'
 import "./dahboard.css"
 import chart1 from "../../assets/chart1.png"
 import chart2 from "../../assets/chart2.png"
-import dropicon from "../../assets/dropicon.png"
-
+import dropicon from "../../assets/blackdrop.png"
+import data from  "./dashBoard.json"
 const Dash = () => {
   return (
     <div className='main'>
@@ -19,98 +19,50 @@ const Dash = () => {
            <tabel>
             <thead>
               <tr>
-              <th style = {{width : "6%"}}>Date Time</th>
-           <th style = {{width : "6%"}}>Created By</th>
-          <th style = {{width : "6%"}}>Client</th>
-          <th style = {{width : "6%"}}>Engagement</th>
-          <th style = {{width : "6%"}}>Report Type</th>
-          <th style = {{width : "6%"}}>Processing Time</th>
-          <th style = {{width : "6%"}}>Financial Year</th>
-          <th style = {{width : "6%"}}>Download</th>
+              <th style = {{width : "8%"}}>Date Time</th>
+           <th style = {{width : "8%"}}>Created By</th>
+          <th style = {{width : "8%"}}>Client</th>
+          <th style = {{width : "8%"}}>Engagement</th>
+          <th style = {{width : "8%"}}>Report Type</th>
+          <th style = {{width : "8%"}}>Processing Time</th>
+          <th style = {{width : "8%"}}>Financial Year</th>
+          <th style = {{width : "8%"}}>Download.xlsx</th>
+          <th style = {{width : "8%"}}>Download.pbix</th>
               </tr>
 
             </thead>
             <tbody>
-          <tr>
-            <td>24 Mar, 23 15:00</td>
-            <td>Karan Gupta</td>
-            <td>Microsoft Coporation</td>
-            <td>Engagement Report</td>
-            <td>Financial Year</td>
-            <td>5mins</td>
-            <td>2022-23</td>
+        
+           {
+            data.map((item, i) => {
+              return (
+                <>
+                  <tr key = {i}>
+            <td>{item.date_time}</td>
+            <td>{item.created_by}</td>
+            <td>{item.client}</td>
+            <td>{item.engagement}</td>
+            <td>{item.report_type}</td>
+            <td>{item.process_time}</td>
+            <td>{item.financial_year}</td>
             <td>
               <button className='download-btn'>
-                Download
+                {item['download.xlsx']}
                 <img src = {dropicon} alt = "" />
               </button>
             </td>
-
-          </tr>
-          <tr>
-            <td>24 Mar, 23 15:00</td>
-            <td>Karan Gupta</td>
-            <td>Microsoft Coporation</td>
-            <td>Engagement Report</td>
-            <td>Financial Year</td>
-            <td>5mins</td>
-            <td>2022-23</td>
             <td>
               <button className='download-btn'>
-                Download
+                {item['download.pbix']}
                 <img src = {dropicon} alt = "" />
               </button>
             </td>
-
+             
           </tr>
-          <tr>
-            <td>24 Mar, 23 15:00</td>
-            <td>Karan Gupta</td>
-            <td>Microsoft Coporation</td>
-            <td>Engagement Report</td>
-            <td>Financial Year</td>
-            <td>5mins</td>
-            <td>2022-23</td>
-            <td>
-              <button className='download-btn'>
-                Download
-                <img src = {dropicon} alt = "" />
-              </button>
-            </td>
-
-          </tr>
-          <tr>
-            <td>24 Mar, 23 15:00</td>
-            <td>Karan Gupta</td>
-            <td>Microsoft Coporation</td>
-            <td>Engagement Report</td>
-            <td>Financial Year</td>
-            <td>5mins</td>
-            <td>2022-23</td>
-            <td>
-              <button className='download-btn'>
-                Download
-                <img src = {dropicon} alt = "" />
-              </button>
-            </td>
-
-          </tr>
-          <tr>
-            <td>24 Mar, 23 15:00</td>
-            <td>Karan Gupta</td>
-            <td>Microsoft Coporation</td>
-            <td>Engagement Report</td>
-            <td>Financial Year</td>
-            <td>5mins</td>
-            <td>2022-23</td>
-            <td>
-              <button className='download-btn'>
-                Download
-                <img src = {dropicon} alt = "" />
-              </button>
-            </td>
-
-          </tr>
+                </>
+              )
+            })
+           }
         </tbody>
            </tabel>
       </div>

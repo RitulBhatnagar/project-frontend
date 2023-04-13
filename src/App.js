@@ -13,8 +13,9 @@ import "react-toastify/dist/ReactToastify.css";
 import Client from './pages/client/Client'
 import Engage from './pages/engage/Engage'
 import UserId from './pages/UserId/UserId'
-import Data from './pages/data/Data'
+import Data from './pages/upload/Upload'
 import Analysis from './pages/analysis/Analysis'
+import Upload from './pages/upload/Upload'
 const App = () => {
   return (
     <div>
@@ -36,9 +37,9 @@ const App = () => {
         <Route path = "/client" element = {<Client/>}/>
         <Route path = "/engage" element = {<Engage/>}/>
         <Route path = "/userid" element = {<UserId/>}/>
-        <Route path = "/upload" element = {<Data/>}/>
-        <Route path = "/analysis" element = {<Data/>}/>
-
+        <Route path = "/upload" element = {<Upload/>}/>
+        <Route path = "/analysis" element = {<Analysis/>}/>
+      
       </Routes>
       </BrowserRouter>
     </div>

@@ -19,7 +19,7 @@ import {
   Text
 } from '@chakra-ui/react'
 import { useState } from 'react'
-import * as XLSX from 'xlsx';
+import data from "./entity.json"
 // import { createEntity } from '../../redux/entity/entitySlice'
 // import { confirmAlert } from "react-confirm-alert";
 // import "react-confirm-alert/src/react-confirm-alert.css";
@@ -160,16 +160,20 @@ const EntityComp = () => {
       <tabel>
             <thead>
               <tr className = "row">
-              <th>Entity Code</th>
-           <th>Entity Name</th>
+              <th style = {{width : "10%"}}>Entity Code</th>
+           <th style = {{width : "20%"}}>Entity Name</th>
           <th style  = {{width : "76%", textAlign : "center"}}>Action</th>
               </tr>
 
             </thead>
             <tbody>
-          <tr>
-          <td>E00002</td>
-            <td>SPC Consulting (P) Ltd.</td>
+            {
+              data.map((item, i) => {
+                return (
+                  <>
+                   <tr key = {i}>
+          <td>{item.entity_code}</td>
+            <td>{item.entity_name}</td>
             <td className = "edit-delete">
                <div >
                <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
@@ -182,25 +186,11 @@ const EntityComp = () => {
                Delete
               </button>
             </td>
-
-          </tr>
-          <tr>
-           <td>E00003</td>
-            <td>S.P. Chopra</td>
-            <td className = "edit-delete">
-               <div >
-               <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-                <img   src = {editicon} alt = ""/>  
-                Edit
-              </button>
-               </div>
-              <button className = "del-btn">
-                <img src = {delicon} alt = ""/>
-               Delete
-              </button>
-            </td>
-
-          </tr>
+            </tr>
+                  </>
+                )
+              })
+            }
           
           {/* {
             entities.map((data, index) => {

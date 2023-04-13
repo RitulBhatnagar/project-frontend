@@ -1,0 +1,50 @@
+[ {
+  "Dummy Data for Client Master Screen": 1,
+  "client_code": "CL0001",
+  "client_name": "SalesForce",
+  "name_of_industry": "Public Sector Undertaking",
+  "size": 0,
+  "growth_cagr": 0,
+  "genral_overview": 0,
+  "competetors": "NA",
+  "action": "Edit/Delete"
+}, {
+  "Dummy Data for Client Master Screen": 2,
+  "client_code": "CL0002",
+  "client_name": "Earn & Young",
+  "name_of_industry": "Consulting",
+  "size": 1511238,
+  "growth_cagr": 0.079,
+  "genral_overview": 0,
+  "competetors": "Deloitte ; KPMG ; PwC",
+  "client_code_7": "https://www.financialexpress.com/industry/pwc-survey-reveals-74-indian-consumers-are-worried-about-personal-finance-63-to-cut-back-non-essential-spending-check-key-trends/3037860/ \r\nhttps://economictimes.indiatimes.com/industry/services/consultancy-/-audit/big-4-affiliate-firms-continue-to-lead-audit-business-in-india/articleshow/95612227.cms ",
+  "action": "Edit/Delete"
+}, {
+  "Dummy Data for Client Master Screen": 3,
+  "client_code": "CL0003",
+  "client_name": "Salty Inc",
+  "name_of_industry": "Fashion Designing",
+  "size": 20000,
+  "growth_cagr": 0.134,
+  "genral_overview": 0,
+  "competetors": "NA",
+  "action": "Edit/Delete"
+}, {
+  "Dummy Data for Client Master Screen": 4,
+  "client_code": "CL0004",
+  "client_name": "Anani Logistics",
+  "name_of_industry": "Logistics",
+  "size": 75287761,
+  "growth_cagr": 0.057,
+  "genral_overview": 0,
+  "competetors": "Gati ; Snowman Logistics "
+}, {
+  "Dummy Data for Client Master Screen": 5,
+  "client_code": "CL0005",
+  "client_name": "Macrosoft",
+  "name_of_industry": "Software & IT",
+  "size": 5404450,
+  "growth_cagr": 0.197,
+  "genral_overview": 0,
+  "competetors": "Google ; IBM"
+}]

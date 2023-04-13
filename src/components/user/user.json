@@ -1,0 +1,154 @@
+[{
+  "user_id": "U001IndPB",
+  "firstname": "Pankaj",
+  "lastname": "Bhasim",
+  "email": "Pankaj@spcnc.com",
+  "mob": 9366157859,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U002IndAR",
+  "firstname": "Atri",
+  "lastname": "Rastogi",
+  "email": "Atri@spcnc.com",
+  "mob": 9940899813,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U003IndKG",
+  "firstname": "Karan",
+  "lastname": "Gupta",
+  "email": "Karan@spcnc.com",
+  "mob": 9998078934,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U004IndSS",
+  "firstname": "Sahil",
+  "lastname": "Shah",
+  "email": "Sahil@spcnc.com",
+  "mob": 9174931429,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U005IndAM",
+  "firstname": "Aditi",
+  "lastname": "Mishra",
+  "email": "Aditi@spcnc.com",
+  "mob": 9226756223,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U006IndTA",
+  "firstname": "Tabrej",
+  "lastname": "Ansari",
+  "email": "Tabrej@spcnc.com",
+  "mob": 9332908821,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U007IndSP",
+  "firstname": "Sanjay",
+  "lastname": "Pandey",
+  "email": "Sanjay@spcnc.com",
+  "mob": 9244703807,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U008IndAM",
+  "firstname": "Ananya",
+  "lastname": "Mangla",
+  "email": "Ananya@spcnc.com",
+  "mob": 9711567734,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U009IndVP",
+  "firstname": "Vinayak",
+  "lastname": "Puri",
+  "email": "Vinayak@spcnc.com",
+  "mob": 9208843236,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U0010IndMB",
+  "firstname": "Mehak",
+  "lastname": "Bansal",
+  "email": "Mehak@spcnc.com",
+  "mob": 9865221306,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U0011IndKS",
+  "firstname": "Komal",
+  "lastname": "Singh",
+  "email": "Komal@spcnc.com",
+  "mob": 9079313581,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U0012IndNA",
+  "firstname": "Naresh",
+  "lastname": "Ahuja",
+  "email": "Naresh@spcnc.com",
+  "mob": 9535949834,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U0013IndVK",
+  "firstname": "Vivek",
+  "lastname": "Kaushik",
+  "email": "Vivek@spcnc.com",
+  "mob": 9836224778,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U0014IndAM",
+  "firstname": "Arti",
+  "lastname": "Mishra",
+  "email": "Arti@spcnc.com",
+  "mob": 9022225891,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U0015IndSC",
+  "firstname": "Sandeep",
+  "lastname": "Chawdhary",
+  "email": "Sandeep@spcnc.com",
+  "mob": 9988674928,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U0016IndPS",
+  "firstname": "Prashant",
+  "lastname": "Singh",
+  "email": "Prashant@spcnc.com",
+  "mob": 9614000634,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}, {
+  "user_id": "U0017IndAK",
+  "firstname": "Amit",
+  "lastname": "Kumar",
+  "email": "Amit@spcnc.com",
+  "mob": 9940487988,
+  "country": "India",
+  "role": "Admin",
+  "action": "Edit/Delete"
+}]

@@ -19,6 +19,7 @@ import {
   Select,
   Textarea
 } from '@chakra-ui/react'
+import data from "./client.json"
 // import { useState } from 'react'
 // import { confirmAlert } from "react-confirm-alert";
 // import { createclient, deleteclient, getAllclient,  }  from "../../redux/client/clientSlice"
@@ -277,15 +278,19 @@ const ClientComp = () => {
 
             </thead>
             <tbody>
-            <tr>
-                  <td>u10</td>
-                    <td>Microsoft</td>
-                    <td>Software</td>
-                    <td>100000</td>
-                    <td>50%</td>
-                    <td>lorem ipsum</td>
-                    <td>lorem ipsum</td>
-                    <td>lorem ipsum</td>
+            {
+              data.map((item, i) => {
+                return (
+                  <>
+                    <tr key = {i}>
+                  <td>{item.client_code}</td>
+                    <td>{item.client_name}</td>
+                    <td>{item.name_of_industry}</td>
+                    <td>{item.size}</td>
+                    <td>{item.growth_cagr}</td>
+                    <td>{item.genral_overview}</td>
+                    <td>{item.competetors}</td>
+                    <td>News</td>
                     <td className = "edit-delete">
                        <div >
                        <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
@@ -300,98 +305,11 @@ const ClientComp = () => {
                     </td>
         
                   </tr>
-                  <tr>
-                  <td>u10</td>
-                    <td>Microsoft</td>
-                    <td>Software</td>
-                    <td>100000</td>
-                    <td>50%</td>
-                    <td>lorem ipsum</td>
-                    <td>lorem ipsum</td>
-                    <td>lorem ipsum</td>
-                    <td className = "edit-delete">
-                       <div >
-                       <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-                        <img   src = {editicon} alt = ""/>  
-                        Edit
-                      </button>
-                       </div>
-                      <button  className = "del-btn" >
-                        <img src = {delicon} alt = ""/>
-                       Delete
-                      </button>
-                    </td>
-        
-                  </tr>
-                  <tr>
-                  <td>u10</td>
-                    <td>Microsoft</td>
-                    <td>Software</td>
-                    <td>100000</td>
-                    <td>50%</td>
-                    <td>lorem ipsum</td>
-                    <td>lorem ipsum</td>
-                    <td>lorem ipsum</td>
-                    <td className = "edit-delete">
-                       <div >
-                       <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-                        <img   src = {editicon} alt = ""/>  
-                        Edit
-                      </button>
-                       </div>
-                      <button  className = "del-btn" >
-                        <img src = {delicon} alt = ""/>
-                       Delete
-                      </button>
-                    </td>
-        
-                  </tr>
-                  <tr>
-                  <td>u10</td>
-                    <td>Microsoft</td>
-                    <td>Software</td>
-                    <td>100000</td>
-                    <td>50%</td>
-                    <td>lorem ipsum</td>
-                    <td>lorem ipsum</td>
-                    <td>lorem ipsum</td>
-                    <td className = "edit-delete">
-                       <div >
-                       <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-                        <img   src = {editicon} alt = ""/>  
-                        Edit
-                      </button>
-                       </div>
-                      <button  className = "del-btn" >
-                        <img src = {delicon} alt = ""/>
-                       Delete
-                      </button>
-                    </td>
-        
-                  </tr>
-                  <tr>
-                  <td>u10</td>
-                    <td>Microsoft</td>
-                    <td>Software</td>
-                    <td>100000</td>
-                    <td>50%</td>
-                    <td>lorem ipsum</td>
-                    <td>lorem ipsum</td>
-                    <td>lorem ipsum</td>
-                    <td className = "edit-delete">
-                       <div >
-                       <button onClick = {onOpen} ref = {btnRef}  className = "edit-btn" >
-                        <img   src = {editicon} alt = ""/>  
-                        Edit
-                      </button>
-                       </div>
-                      <button  className = "del-btn" >
-                        <img src = {delicon} alt = ""/>
-                       Delete
-                      </button>
-                    </td>
-        
-                  </tr>
+                  </>
+                )
+              })
+            }
+                 
         
             {/* {
               clients.map((data) => {

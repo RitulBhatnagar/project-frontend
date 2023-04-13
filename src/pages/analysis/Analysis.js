@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from '../../components/header/Header'
 import Sidebar from '../../components/sidebar/Sidebar'
-import DataComp from '../../components/data/DataComp'
 import { useLocation } from 'react-router-dom'
+import Analyse from '../../components/analyse/Analyse'
 const Analysis = () => {
   const location = useLocation();
   console.log(location.pathname);
@@ -11,7 +11,7 @@ const Analysis = () => {
    <Header/>
    <div className="body-container">
     <Sidebar/>
-    <DataComp/>
+    <Analyse/>
     </div> 
     </>
   )

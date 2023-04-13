@@ -1,10 +1,10 @@
 import React,{useEffect, useState} from 'react'
 import Header from '../../components/header/Header'
 import Sidebar from '../../components/sidebar/Sidebar'
-import DataComp from '../../components/data/DataComp'
+import UploadComp from '../../components/Upload/UploadComp'
 import {useLocation} from "react-router-dom"
 
-const Data = () => {
+const Upload = () => {
   const location = useLocation();
   const[word, setWord] = useState("");
  useEffect(() => {
@@ -25,10 +25,10 @@ const Data = () => {
    <Header/>
    <div className="body-container">
     <Sidebar/>
-    <DataComp word = {word}/>
+    <UploadComp word = {word}/>
     </div> 
     </>
   )
 }
 
-export default Data
+export default Upload

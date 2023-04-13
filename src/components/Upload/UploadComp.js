@@ -1,7 +1,7 @@
 import React from 'react'
-import "./datacomp.css"
+import "./Uploadcomp.css"
 import comingicon from "../../assets/coming.png"
-import dropicon from "../../assets/dropicon.png"
+import dropicon from "../../assets/blackdrop.png"
 
 import {
   Drawer,
@@ -19,14 +19,15 @@ import {
   Select,
    Tabs, TabList, TabPanels, Tab, TabPanel   
 } from '@chakra-ui/react'
-const DataComp = ({word}) => {
+import data from "./upload.json"
+const UploadComp = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef()
   return (
     <div className="main">
       <div className="top-container">
         <div className="heading-container">
-          <h1>Data Operations - {word}</h1>
+          <h1>Data Operations - Upload</h1>
           <p>Please add the details of the entity that you are opening today</p>
         </div>
         <div className="button-container">
@@ -44,7 +45,7 @@ const DataComp = ({word}) => {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader fontFamily = "Lato" fontWeight = "bold" fontSize = "18px">
-            Data Operations-{word}
+            Data Operations - Upload
           </DrawerHeader>
           <Divider/>
           <DrawerBody>
@@ -144,98 +145,46 @@ const DataComp = ({word}) => {
               <tabel>
             <thead>
               <tr>
-              <th style = {{width : "6%"}}>Date Time</th>
-           <th style = {{width : "6%"}}>Created By</th>
-          <th style = {{width : "6%"}}>Client</th>
-          <th style = {{width : "6%"}}>Engagement</th>
-          <th style = {{width : "6%"}}>Report Type</th>
-          <th style = {{width : "6%"}}>Processing Time</th>
-          <th style = {{width : "6%"}}>Financial Year</th>
-          <th style = {{width : "6%"}}>Download</th>
+              <th style = {{width : "10%"}}>Date Time</th>
+           <th style = {{width : "10%"}}>Created By</th>
+          <th style = {{width : "10%"}}>Client</th>
+          <th style = {{width : "10%"}}>Engagement</th>
+          <th style = {{width : "10%"}}>Report Type</th>
+          <th style = {{width : "10%"}}>Download.xlsx</th>
+          <th style = {{width : "10%"}}>Download.pbix</th>
               </tr>
 
             </thead>
             <tbody>
-          <tr>
-            <td>24 Mar, 23 15:00</td>
-            <td>Karan Gupta</td>
-            <td>Microsoft Coporation</td>
-            <td>Engagement Report</td>
-            <td>Financial Year</td>
-            <td>5mins</td>
-            <td>2022-23</td>
+          {
+            data.map((item, i) => {
+              return (
+                <>
+                <tr key = {i}>
+            <td>{item.data_time}</td>
+            <td>{item.created_by}</td>
+            <td>{item.client}</td>
+            <td>{item.engage}</td>
+            <td>{item.report}</td>
             <td>
               <button className='download-btn'>
-                Download
+                {item['download.pbix']}
+                <img src = {dropicon} alt = "" />
+              </button>
+            </td>
+            <td>
+              <button className='download-btn'>
+                {item['download.pbix']}
                 <img src = {dropicon} alt = "" />
               </button>
             </td>
 
           </tr>
-          <tr>
-            <td>24 Mar, 23 15:00</td>
-            <td>Karan Gupta</td>
-            <td>Microsoft Coporation</td>
-            <td>Engagement Report</td>
-            <td>Financial Year</td>
-            <td>5mins</td>
-            <td>2022-23</td>
-            <td>
-              <button className='download-btn'>
-                Download
-                <img src = {dropicon} alt = "" />
-              </button>
-            </td>
-
-          </tr>
-          <tr>
-            <td>24 Mar, 23 15:00</td>
-            <td>Karan Gupta</td>
-            <td>Microsoft Coporation</td>
-            <td>Engagement Report</td>
-            <td>Financial Year</td>
-            <td>5mins</td>
-            <td>2022-23</td>
-            <td>
-              <button className='download-btn'>
-                Download
-                <img src = {dropicon} alt = "" />
-              </button>
-            </td>
-
-          </tr>
-          <tr>
-            <td>24 Mar, 23 15:00</td>
-            <td>Karan Gupta</td>
-            <td>Microsoft Coporation</td>
-            <td>Engagement Report</td>
-            <td>Financial Year</td>
-            <td>5mins</td>
-            <td>2022-23</td>
-            <td>
-              <button className='download-btn'>
-                Download
-                <img src = {dropicon} alt = "" />
-              </button>
-            </td>
-
-          </tr>
-          <tr>
-            <td>24 Mar, 23 15:00</td>
-            <td>Karan Gupta</td>
-            <td>Microsoft Coporation</td>
-            <td>Engagement Report</td>
-            <td>Financial Year</td>
-            <td>5mins</td>
-            <td>2022-23</td>
-            <td>
-              <button className='download-btn'>
-                Download
-                <img src = {dropicon} alt = "" />
-              </button>
-            </td>
-
-          </tr>
+                </>
+              )
+            })
+          }
+        
         </tbody>
            </tabel>
               </TabPanel>
@@ -282,4 +231,4 @@ const DataComp = ({word}) => {
   )
 }
 
-export default DataComp
+export default UploadComp

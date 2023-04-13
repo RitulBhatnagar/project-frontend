@@ -10,7 +10,7 @@ position: sticky;
 left: 0;
 top: 0;
 width: 220px;
-height:800px;
+height:100vw;
 background: #0E1B2D;
 flex: 1;
 `;
