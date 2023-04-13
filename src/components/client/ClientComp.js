@@ -264,14 +264,14 @@ const ClientComp = () => {
       <tabel>
             <thead>
               <tr className = "row">
-            <th>Client Code</th>
-           <th>Client Name</th>
-          <th>Name of Industry</th>
-          <th>Size</th>
-          <th>Growth CAGR</th>
-          <th>Genral Overview</th>
-          <th>Top 10 Competitors</th>
-          <th>Latest News Snippets</th>
+            <th >Client Code</th>
+           <th >Client Name</th>
+          <th >Name of Industry</th>
+          <th >Size</th>
+          <th >Growth CAGR</th>
+          <th >Genral Overview</th>
+          <th > Top 10 Competitors</th>
+          <th style = {{width : "9%"}}>Latest News Snippets</th>
           <th>Action</th>
 
               </tr>
