@@ -4,7 +4,7 @@ import logo from "../../assets/Group 13.png"
 import { Input, Button, Text, InputGroup, InputRightElement, Image } from "@chakra-ui/react";
 import image from "../../assets/image 3.jpg"
 import {Link} from "react-router-dom"
-import companylogo from "../../assets/Group.png"
+import companylogo from "../../assets/logoHome.png"
 
 const LinkPage = () => {
   return (

@@ -9,15 +9,16 @@ const Home = () => {
     <div className="operation">
       {/* <img className="bg-img" alt="" src = {image} /> */}
     <div className="top-bar">
-      <img src = {logoHome} alt = ""/>
+      <img className = "logoImage" src = {logoHome} alt = ""/>
       <div className="btn-container">
         <button className="gradient">
           Register For 60 days
         </button>
         <Link to = "/signIn">
-        <button className="signIn">
+          <button className="signIn">
           Sign In
         </button>
+          
         </Link>
       </div>
      

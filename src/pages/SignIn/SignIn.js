@@ -4,7 +4,7 @@ import "./SignIn.css";
 import image from "../../assets/image 3.jpg"
 import mailicon from "../../assets/mail-icon.png"
 import lockicon from "../../assets/lock-icon.png"
-import companylogo from "../../assets/Group.png"
+import companylogo from "../../assets/logoHome.png"
 import { useState, useEffect } from "react";
 import {Link} from "react-router-dom"
 

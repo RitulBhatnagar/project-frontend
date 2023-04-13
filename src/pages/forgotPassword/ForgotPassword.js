@@ -4,7 +4,7 @@ import { Input, Button, Text, InputGroup, InputRightElement, Image, Link } from 
 import image from "../../assets/image 3.jpg"
 import mailicon from "../../assets/mail-icon.png"
 import logo from "../../assets/lock2.jpg"
-import companylogo from "../../assets/Group.png"
+import companylogo from "../../assets/logoHome.png"
 const ForgotPassword = () => {
   const intialValues = {email : ""}
   const[formValues, setFormValues] = useState(intialValues)

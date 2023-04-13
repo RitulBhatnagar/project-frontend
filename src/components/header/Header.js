@@ -13,7 +13,7 @@ import bellicon from "../../assets/bellicon.png"
 import profileimg from "../../assets/profilepic.png"
 import dropdown from "../../assets/dropdown.png"
 import searchicon from "../../assets/searchicon.png"
-import logo from "../../assets/Group.png"
+import logo from "../../assets/dashLogo.png"
 const Header = () => {
   return (
     <div className  = "header">

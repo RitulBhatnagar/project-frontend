@@ -1,0 +1,24 @@
+.last-drawer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 190px;
+}
+.buttonContainer{
+  margin-bottom: 20px;
+}
+.iconContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FBE6A34D;
+  width: 460px;
+  height: 210px;
+  align-self: center;
+}
+.download-icon{
+  cursor: pointer;
+  padding: 35px;
+}

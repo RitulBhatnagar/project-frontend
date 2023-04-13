@@ -1,7 +1,9 @@
 import React from 'react'
 import comingicon from "../../assets/coming.png"
 import dropicon from "../../assets/blackdrop.png"
-
+import excelicon from "../../assets/excel-icon.png"
+import pbxicon from "../../assets/pb-icon.png"
+import "./analyis.css"
 import {
   Drawer,
   DrawerBody,
@@ -106,10 +108,18 @@ const Analyse = () => {
       </DrawerBody>
                 <Divider/>
           <DrawerFooter>
-            <Button variant='outline' size = "lg" backgroundColor =  "#ffff" borderRadius = "80px"color = "#333333" width = "200px" border = " 1px solid #999999"marginRight="20px" height = "38px" >
+           <div className="last-drawer">
+           <div className="buttonContainer">
+           <Button variant='outline' size = "lg" backgroundColor =  "#ffff" borderRadius = "80px"color = "#333333" width = "200px" border = " 1px solid #999999"marginRight="20px" height = "38px" >
               Reset
             </Button>
-            <Button colorScheme='blue' size = "lg" backgroundColor =  "#274C86" borderRadius = "80px"color = "white" width = "200px" height = "38px">Upload</Button>
+            <Button colorScheme='blue' size = "lg" backgroundColor =  "#274C86" borderRadius = "80px"color = "white" width = "200px" height = "38px">Analyze</Button>
+           </div>
+            <div className="iconContainer">
+              <img className = "download-icon" src = {excelicon} alt = ""/>
+              <img className = "download-icon" src = {pbxicon} alt = ""/>
+            </div>
+           </div>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

@@ -3,23 +3,22 @@
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  top: 40px;
+  top: 30px;
   left : 20px;
   width: 100%;
 }
 .btn-container{
   position: absolute;
-  right: 80px;
+  right: 75px;
   display: flex;
   justify-content: 4;
   align-items: center;
   gap: 10px;
-
 }
-.top-bar img{
+/* .top-bar img{
   width: 249px;
   height: 39.8px;
-}
+} */
 .gradient{
 
   width: 283px;
