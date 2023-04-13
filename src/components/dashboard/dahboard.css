@@ -66,3 +66,13 @@ td {
 .download-btn img{
   margin-left: 5px;
 }
+.main h2{
+  font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+text-align: left;
+margin-left: 30px;
+margin-top: 20px;
+}

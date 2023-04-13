@@ -16,6 +16,7 @@ color: white;
 
   &:hover {
     background: rgba(255, 255, 255, 0.1);
+    border-left : 3px solid white;
     cursor: pointer;
   }
 `;
@@ -46,7 +47,7 @@ color: white;
   padding-top: 5px;
   text-decoration: none;
   &:hover {
-    border-left : 1px solid white;
+    border-left : 3px solid white;
     background: rgba(255, 255, 255, 0.1);
   }
 `;

@@ -8,13 +8,14 @@ const Dash = () => {
   return (
     <div className='main'>
       <div className="heading-container">
-        <h1>Audit Automation Dashboard</h1>
+        <h1>Engagement Log</h1>
         <p>Good Morning Karan to SPCNXT | transforming Business</p>
       </div>
       <div className="chart-container">
       <img src = {chart1} alt = ""/>
       <img src = {chart2} alt = ""/>
       </div>
+      <h2>Analytics Tool -Engagement Log</h2>
       <div className="table-container">
            <tabel>
             <thead>
