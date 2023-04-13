@@ -26,7 +26,7 @@ const Analyse = () => {
     <div className="main">
       <div className="top-container">
         <div className="heading-container">
-          <h1>Data Operations - Upload</h1>
+          <h1>Data Operations - Analysis</h1>
           <p>Please add the details of the entity that you are opening today</p>
         </div>
         <div className="button-container">
@@ -44,7 +44,7 @@ const Analyse = () => {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader fontFamily = "Lato" fontWeight = "bold" fontSize = "18px">
-            Data Operations - Upload
+          Data Operations - Analysis
           </DrawerHeader>
           <Divider/>
           <DrawerBody>
