@@ -10,18 +10,11 @@ position: sticky;
 left: 0;
 top: 0;
 width: 220px;
-height:100vw;
+height:1600px;
 background: #0E1B2D;
 flex: 1;
 `;
-const NavIcon = styled(Link)`
-  margin-left: 2rem;
-  font-size: 2rem;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`;
+
 const SidebarWrap = styled.div`
 display: flex;
 width: 100%;
