@@ -12,8 +12,10 @@ const Dash = () => {
         <p>Good Morning Karan to SPCNXT | transforming Business</p>
       </div>
       <div className="chart-container">
-      <img src = {chart1} alt = ""/>
-      <img src = {chart2} alt = ""/>
+      <iframe title="Report Section" width="100%" height="600px" src="https://app.powerbi.com/view?r=eyJrIjoiYWZjM2FhNDgtNTM3MC00ZTUzLTk4N2QtOTc3ZjhhZGE2YTZjIiwidCI6IjZhYWQ0ZjdlLWQxMjItNGE1My04M2YyLTJlMDFkYmZkOGNlOSJ9" frameborder="0" allowFullScreen="true"></iframe>
+
+ 
+      {/* <img src = {chart2} alt = ""/> */}
       </div>
       <h2>Analytics Tool -Engagement Log</h2>
       <div className="table-container">

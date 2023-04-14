@@ -139,6 +139,7 @@ const Analyse = () => {
             fontWeight = "700"
             width="100%"
             >
+              <Tab>Overview</Tab>
               <Tab>Banking</Tab>
               <Tab>Procure to pay</Tab>
               <Tab>Order to cash</Tab>
@@ -151,6 +152,10 @@ const Analyse = () => {
             </TabList>
             <TabPanels>
               <TabPanel>
+              <iframe title="Report Section" width="100%" height="500px" src="https://app.powerbi.com/view?r=eyJrIjoiNWM1ZThjNDEtMjU5OC00MDM1LWE4MzEtMGZmYjQ0NWJhZDQ0IiwidCI6IjZhYWQ0ZjdlLWQxMjItNGE1My04M2YyLTJlMDFkYmZkOGNlOSJ9" frameborder="0" allowFullScreen="true"></iframe>
+              </TabPanel>
+              <TabPanel>
+              <iframe title="Website_Dummy_Forensic" width="100%" height="400px" src="https://app.powerbi.com/view?r=eyJrIjoiOTFhZmJmODUtMjVkNi00OWRiLWJkY2ItMTQ2ZGNlOTE4MjY5IiwidCI6IjZhYWQ0ZjdlLWQxMjItNGE1My04M2YyLTJlMDFkYmZkOGNlOSJ9" frameborder="0" allowFullScreen="true"></iframe>
               <tabel>
             <thead>
               <tr>
