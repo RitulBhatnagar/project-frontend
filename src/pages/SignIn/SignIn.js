@@ -6,13 +6,15 @@ import mailicon from "../../assets/mail-icon.png"
 import lockicon from "../../assets/lock-icon.png"
 import companylogo from "../../assets/logoHome.png"
 import { useState, useEffect } from "react";
-import {Link} from "react-router-dom"
+import {Link, Navigate, useNavigate} from "react-router-dom"
 
 const FrameComponent = () => {
   const intialValues = {email : "", password : ""}
   const[formValues, setFormValues] = useState(intialValues)
   const[formError, setFormError] = useState({});
   const[isSubmit, setIsSubmit] = useState(false);
+  const navigate = useNavigate();
+  console.log(navigate)
   const handleChange = (e) => {
      e.preventDefault();
      const {name, value} = e.target;
@@ -34,12 +36,23 @@ const FrameComponent = () => {
       console.log(formValues);
     }
   })
+  const handleSignIn = (e)=>{
+    e.preventDefault();
+
+     if(formValues.email  === "karangupta@spcnc.com" && formValues.password === "admin"){
+      navigate("/dashboard")
+     }
+     else{
+        setFormError("Incorrect email id or password");
+     }
+  }
   const validate = (values) => {
    const errors = {}
    const regex =   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
    if(!values.email){
      errors.email = "*Please Enter a Email"
-   }else if(!regex.test(values.email)){
+   }
+   else if(!regex.test(values.email)){
     errors.email = "*Please Enter a valid email"
    }
    if(!values.password){
@@ -94,6 +107,7 @@ const FrameComponent = () => {
           size = "lg"
           width = "400px"
           type = "submit"
+          onClick = {handleSignIn}
           >
             Sign In
           </Button>
