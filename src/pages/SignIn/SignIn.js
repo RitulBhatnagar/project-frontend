@@ -40,7 +40,7 @@ const FrameComponent = () => {
     e.preventDefault();
 
      if(formValues.email  === "karangupta@spcnc.com" && formValues.password === "admin"){
-      navigate("/dashboard")
+      navigate("/home")
      }
      else{
         setFormError("Incorrect email id or password");
@@ -111,6 +111,7 @@ const FrameComponent = () => {
           >
             Sign In
           </Button>
+          <Text color = "tomato" fontSize = "12px" marginLeft = "250px">{formError.password}</Text>
         </div>
         </form>
        

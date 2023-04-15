@@ -3,6 +3,7 @@ import Header from '../../components/header/Header'
 import Sidebar from '../../components/sidebar/Sidebar'
 import { useLocation } from 'react-router-dom'
 import Analyse from '../../components/analyse/Analyse'
+import SideMenu from '../../components/sidebar/SideMenu'
 const Analysis = () => {
   const location = useLocation();
   console.log(location.pathname);
@@ -10,7 +11,7 @@ const Analysis = () => {
     <>
    <Header/>
    <div className="body-container">
-    <Sidebar/>
+    <SideMenu/>
     <Analyse/>
     </div> 
     </>

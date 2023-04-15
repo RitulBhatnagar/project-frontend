@@ -3,6 +3,7 @@ import Header from '../../components/header/Header'
 import Sidebar from '../../components/sidebar/Sidebar'
 import UploadComp from '../../components/Upload/UploadComp'
 import {useLocation} from "react-router-dom"
+import SideMenu from '../../components/sidebar/SideMenu'
 
 const Upload = () => {
   const location = useLocation();
@@ -24,7 +25,7 @@ const Upload = () => {
     <>
    <Header/>
    <div className="body-container">
-    <Sidebar/>
+    <SideMenu/>
     <UploadComp word = {word}/>
     </div> 
     </>

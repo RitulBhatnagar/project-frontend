@@ -10,44 +10,49 @@ import fileicon from "../../assets/fileicon.png"
 
 export const SidebarData = [
   {
-    title : "Dashboard",
-    path : "/dashboard",
+    title : "Home",
+    path : "/home",
     icon : dashicon
   },
   {
-    title : "Entity Master",
-    path : "/entity",
-    icon : entityicon
+    title : "User",
+    icon : usericon,
+    iconClosed : downicon,
+    iconOpened : upicon,
+    subNav :[
+      {
+        title : "Client",
+        path : "/client"
+      },
+      {
+        title : "Engagement",
+        path : "/engage",
+        iconClosed : downicon,
+        iconOpened : upicon,
+        subNav : [
+        {  
+          title : "Data operations",
+          icon : fileicon
+      }
+        ]
+      }
+    ]
   },
+ 
   {
-    title : "Client Master",
-    path : "/client",
-    icon : clienticon
-  },
-  {
-    title : "Engagement Master",
-    path : "/engage",
-    icon : engageicon
-  },
-  {
-    title : "User Id Master",
-    path : "/userid",
-    icon : usericon
-  },
-  {
-    title : "Data Operations",
+    title : "Admin",
     icon : fileicon,
     iconClosed : downicon,
     iconOpened : upicon,
 
     subNav : [
       {
-        title : "Upload",
-        path : "/upload"
+        title : "Entity",
+        path : "/entity"
       },
       {
-        title : "Analysis",
-        path : "/analysis"
+        title : "User",
+        path : "/userid"
       }
     ]
   }

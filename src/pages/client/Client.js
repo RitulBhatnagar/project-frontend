@@ -5,6 +5,7 @@ import ClientComp from "../../components/client/ClientComp"
 // import { getAllEntity, reset } from '../../redux/entity/entitySlice'
 // import {useDispatch, useSelector}from "react-redux"
 import {useState} from "react"
+import SideMenu from '../../components/sidebar/SideMenu'
 // import { getAllclient } from '../../redux/client/clientSlice'
 const Client = () => {
   // const dispatch = useDispatch();
@@ -37,7 +38,7 @@ const Client = () => {
     <>
     <Header/>
     <div className="body-container">
-      <Sidebar/>
+      <SideMenu/>
       <ClientComp/>
     </div>
     </>

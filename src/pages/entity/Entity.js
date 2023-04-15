@@ -3,6 +3,7 @@ import Sidebar from '../../components/sidebar/Sidebar'
 import  "./entity.css"
 import Header from '../../components/header/Header'
 import EntityComp from '../../components/entity/EntityComp'
+import SideMenu from '../../components/sidebar/SideMenu'
 // import { getAllEntity, reset } from '../../redux/entity/entitySlice'
 // import {useDispatch, useSelector}from "react-redux"
 const Entity = () => {
@@ -22,7 +23,7 @@ const Entity = () => {
     <>
     <Header/>
     <div className="body-container">
-      <Sidebar/>
+      <SideMenu/>
       <EntityComp />
     </div>
     </>

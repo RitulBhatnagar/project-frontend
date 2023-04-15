@@ -11,9 +11,6 @@ const Home = () => {
     <div className="top-bar">
       <img className = "logoImage" src = {logoHome} alt = ""/>
       <div className="btn-container">
-        <button className="gradient">
-          Register For 60 days
-        </button>
         <Link to = "/signIn">
           <button className="signIn">
           Sign In
@@ -26,7 +23,11 @@ const Home = () => {
     <div className="banner">
         <div className="banner-heading">
           <h1>
-          Audit Automation for Professional Service Organisations
+          Audit Automation 
+          <br/>
+          <span className = "italic">for</span> 
+          <br/>
+          Professional Service Organisations
           </h1>
           <p>
           Effectively manage your Data and Audit with best-in-class analytics and visualizations
