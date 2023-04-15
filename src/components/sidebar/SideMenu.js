@@ -4,15 +4,27 @@ import {
   MenuFoldOutlined,
   PieChartOutlined,
 } from '@ant-design/icons';
-import { Button, Menu } from 'antd';
+// import dashicon from "../../assets/dashicon.png"
+// import entityicon from "../../assets/entityicon.png"
+// import clienticon from "../../assets/clienticon.png"
+// import usericon from "../../assets/usericon.png"
+// import engageicon from "../../assets/engageicon.png"
+// import upicon from "../../assets/upicon.png";
+// import downicon from "../../assets/dropicon.png"
+// import fileicon from "../../assets/fileicon.png"
+
+import { Button, Menu, ConfigProvider } from 'antd';
 import { useState } from 'react';
 import 'antd/dist/reset.css';
 import "./sidebar.css"
 import {useNavigate} from "react-router-dom"
-function getItem(label, key, img, children, type) {
+
+import {AiOutlineFolderOpen, AiOutlineFileDone, AiOutlineUser} from "react-icons/ai"
+import {TiShoppingBag} from "react-icons/ti"
+function getItem(label, key, icon, children, type) {
   return {
     key,
-    img,
+    icon,
     children,
     label,
     type,
@@ -20,12 +32,12 @@ function getItem(label, key, img, children, type) {
 }
 const items = [
   getItem('Home', 'home'),
-  getItem('User', 'sub1',  <AppstoreOutlined/>,[
-    getItem('My client', 'client'),
-    getItem('My Engagement', 'engage', null, [getItem("Data Operation", "sub3", null, [getItem("Upload", "upload"), getItem("Analysis", "analysis")])]),
+  getItem('User', 'user',  null,[
+    getItem('My client', 'client', <AiOutlineUser/>),
+    getItem('My Engagement', 'engage', <AiOutlineFileDone/>, [getItem("Data Operation", "data", <AiOutlineFolderOpen/>, [getItem("Upload", "upload"), getItem("Analysis", "analysis")])]),
   ]),
-  getItem('Admin', 'sub4', null, [
-      getItem("Entity Master", "entity"), getItem("User Id Master", "userid")
+  getItem('Admin', 'admin', null, [
+      getItem("Entity Master", "entity", <TiShoppingBag/>), getItem("User Id Master", "userid", <AiOutlineUser/>)
   ]),
 ];
 const SideMenu = () => {
@@ -38,16 +50,30 @@ const SideMenu = () => {
   return (
     <div
       className = "sidebar"
+      
     >
+      <ConfigProvider
+      theme={{
+        token :{
+          colorBgTextHover : "#ffffff1a",
+          colorBgTextActive : "#ffffff1a",
+          colorText : "white",
+          colorIconHover : "white",
+          colorIcon  : "white",
+          colorBgBase:"#ffffff1c",
+          colorBgContainer : "#ffffff1c",
+        }
+      }}
+      >
  
       <Menu
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
+        
         mode="inline"
         items={items}
         style  = {{backgroundColor : "#0E1B2D", color : "white",}}
         onClick={onClick}
       />
+      </ConfigProvider>
     </div>
   );
 };

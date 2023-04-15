@@ -2,8 +2,8 @@
   position: sticky;
   left: 0;
   top: 0;
-  width: 220px;
-  height: 2400px;
+  width: 250px;
+  height: 4000px;
   background: #0E1B2D;
   flex: 1;
 }
@@ -44,4 +44,8 @@ margin-left: 60px;
 font-size: 14px;
 font-weight: 500;
 font-family: var(--font-lato);
+}
+.ant-design:hover{
+  background-color: #0E1B2D;
+  color: "white";
 }
