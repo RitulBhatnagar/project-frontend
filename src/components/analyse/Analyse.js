@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import comingicon from "../../assets/coming.png"
 import dropicon from "../../assets/blackdrop.png"
 import excelicon from "../../assets/excel-icon.png"
@@ -18,11 +18,14 @@ import {
   Divider,
   Text,
   Select,
-   Tabs, TabList, TabPanels, Tab, TabPanel   
+   Tabs, TabList, TabPanels, Tab, TabPanel,Fade, ScaleFade, Slide, SlideFade, Collapse, Icon
 } from '@chakra-ui/react'
 import data from "./analyse.json"
+import IconContainer from './IconContainer'
 const Analyse = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose} = useDisclosure();
+  // const {isOpen2, onToggle} = useDisclosure();
+  const[show, setShow] = useState(false);
   const btnRef = React.useRef()
   return (
     <div className="main">
@@ -32,9 +35,8 @@ const Analyse = () => {
           <p>Please add the details of the entity that you are opening today</p>
         </div>
         <div className="button-container">
-          <button className='simple-btn'>Download Template</button>
           <button ref = {btnRef} onClick= {onOpen}
-           className = "add-btn">Upload</button>
+           className = "add-btn">Analyze</button>
              <Drawer
       isOpen = {isOpen}
       placement='right'
@@ -103,6 +105,45 @@ const Analyse = () => {
         marginLeft="4px"
       />
       </div>
+      <div className="input">
+      <Text fontFamily = "Lato" fontWeight = "400" lineHeight="14px" fontSize = "12px">
+            Bank Name
+           </Text>
+           <Select
+        placeholder='Select Bank Name'
+        width = "200px"
+         backgroundcColor  = " #F7F7F7"
+         border = "1px solid #D5D5D5"
+         color  = "#999999"
+         marginTop="5px"
+        />
+      </div>
+      <div className="input">
+      <Text fontFamily = "Lato" fontWeight = "400" lineHeight="14px" fontSize = "12px">
+            Account Number
+           </Text>
+           <Input
+        placeholder='Enter Account Number'
+        width = "200px"
+         backgroundcColor  = " #F7F7F7"
+         border = "1px solid #D5D5D5"
+         color  = "#999999"
+         marginTop="5px"
+        />
+      </div>
+      <div className="input">
+      <Text fontFamily = "Lato" fontWeight = "400" lineHeight="14px" fontSize = "12px">
+            Materiality
+           </Text>
+           <Input
+        placeholder='Enter materiality'
+        width = "200px"
+         backgroundcColor  = " #F7F7F7"
+         border = "1px solid #D5D5D5"
+         color  = "#999999"
+         marginTop="5px"
+        />
+      </div>
             </div>
           
       </DrawerBody>
@@ -113,12 +154,11 @@ const Analyse = () => {
            <Button variant='outline' size = "lg" backgroundColor =  "#ffff" borderRadius = "80px"color = "#333333" width = "200px" border = " 1px solid #999999"marginRight="20px" height = "38px" >
               Reset
             </Button>
-            <Button colorScheme='blue' size = "lg" backgroundColor =  "#274C86" borderRadius = "80px"color = "white" width = "200px" height = "38px">Analyze</Button>
+            <Button colorScheme='blue' size = "lg" backgroundColor =  "#274C86" borderRadius = "80px"color = "white" width = "200px" height = "38px" onClick = {() => setShow(!show)}>Analyze</Button>
            </div>
-            <div className="iconContainer">
-              <img className = "download-icon" src = {excelicon} alt = ""/>
-              <img className = "download-icon" src = {pbxicon} alt = ""/>
-            </div>
+            {
+              show === true ? <IconContainer/> : ""
+            }
            </div>
           </DrawerFooter>
         </DrawerContent>
