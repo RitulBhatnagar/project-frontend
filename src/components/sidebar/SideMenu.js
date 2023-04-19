@@ -34,7 +34,8 @@ const items = [
   getItem('Home', 'home'),
   getItem('User', 'user',  null,[
     getItem('My client', 'client', <AiOutlineUser/>),
-    getItem('My Engagement', 'engage', <AiOutlineFileDone/>, [getItem("Data Operation", "data", <AiOutlineFolderOpen/>, [getItem("Upload", "upload"), getItem("Analysis", "analysis")])]),
+    getItem("Data Operation", "data", <AiOutlineFolderOpen/>, [getItem("Upload", "upload"), getItem("Analysis", "analysis")]),
+    getItem('My Engagement', 'engage', <AiOutlineFileDone/>),
   ]),
   getItem('Admin', 'admin', null, [
       getItem("Entity Master", "entity", <TiShoppingBag/>), getItem("User Id Master", "userid", <AiOutlineUser/>)
